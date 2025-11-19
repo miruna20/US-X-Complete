@@ -1,0 +1,61 @@
+batch_size: 4
+workers: 0
+nepoch: 100
+model_name: vrcnet_multimodal
+load_model: False
+start_epoch: 0
+num_points: 4096
+num_partial_scans_per_mesh: 1
+
+path_to_train_dataset: datasets/Verse2020_VertBodyLabelmap_polluted_train.h5
+path_to_val_dataset: datasets/Verse2020_VertBodyLabelmap_polluted_val.h5
+path_to_test_dataset: datasets/Verse2020_VertBodyLabelmap_polluted_val.h5
+
+work_dir: log/
+flag: debug
+loss: cd
+manual_seed: 42
+use_mean_feature: False
+step_interval_to_print: 500
+epoch_interval_to_save: 1
+epoch_interval_to_val: 1
+varying_constant: 0.01, 0.1, 0.5, 1
+varying_constant_epochs: 5, 15, 30
+
+lr: 0.0001
+lr_decay: True
+lr_decay_interval: 40
+lr_decay_rate: 0.7
+lr_step_decay_epochs: null
+lr_step_decay_rates: null
+lr_clip: 1.e-6
+optimizer: Adam
+weight_decay: 0
+betas: 0.9, 0.999
+
+layers: 1, 1, 1, 1
+distribution_loss: KLD
+knn_list: "16"
+pk: 10
+local_folding: True
+points_label: True
+num_coarse_raw: 2048
+num_fps: 4096
+num_coarse: 4096
+
+apply_trafo: False
+sigma: 0.005
+
+# test
+align: False
+save_vis: False
+eval_emd: False
+
+use_labelmaps_in_PMNET: True
+use_labelmaps_in_RENet: True
+
+wandb:
+  enabled: false
+  api_key: ""
+  project: ""
+  tags: ""
