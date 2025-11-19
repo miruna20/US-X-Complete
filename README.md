@@ -28,5 +28,17 @@ To use these datasets, download them and place them in the ShapeCompletion/compl
 The weights of our multimodal network can be found at https://syncandshare.lrz.de/getlink/fi4hJgCvKggP1vhPAFpECJ/
 To use the weights, download the folder and place it in ShapeCompletion/completion/log/. 
 
+## Citation
+```
+@inproceedings{gafencu2025us,
+  title={US-X Complete: A Multi-modal Approach to Anatomical 3D Shape Recovery},
+  author={Gafencu, Miruna-Alexandra and Velikova, Yordanka and Navab, Nassir and Azampour, Mohammad Farid},
+  booktitle={International Workshop on Shape in Medical Imaging},
+  pages={218--231},
+  year={2025},
+  organization={Springer}
+}
+```
+
 ## Acknowledgement
 This implementation is based on the original work from the repository https://github.com/paul007pl/MVP_Benchmark. This code was adapted and expanded for our method.
